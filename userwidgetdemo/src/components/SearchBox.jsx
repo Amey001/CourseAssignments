@@ -18,7 +18,7 @@ const SearchBox = () => {
       {/* <span> */}
       <input
         type="text"
-        className="h-5 mx-2 w-40 bg-gray-200 "
+        className="hidden md:flex h-5 mx-2 w-40 bg-gray-200 "
         placeholder="Search here..."
         alt="search"
       />

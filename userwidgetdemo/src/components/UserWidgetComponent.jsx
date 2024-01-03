@@ -18,10 +18,10 @@ const UserWidgetComponent = () => {
       status: "InActive",
     },
     {
-      name: "Roman Torres",
+      name: "Amey Bhosale",
       email: "Romantorres@gmail.com",
       image: "../images/roman.jpeg",
-      status: "InActive",
+      status: "Active",
     },
   ];
   return (
@@ -42,7 +42,7 @@ const UserWidgetComponent = () => {
             >
               <path d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.498.498 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
             </svg>
-            <h1 className="md:text-[14px]">Sort By</h1>
+            <h1 className="hidden md:flex md:text-[14px]">Sort By</h1>
           </button>
           <button
             className="flex items-center bg-gray-200 border border-gray rounded-1 h-7 mr-3 p-2"
@@ -58,16 +58,16 @@ const UserWidgetComponent = () => {
             >
               <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
             </svg>
-            <span className="text-[14px]">Filter By</span>
+            <span className="hidden md:flex md:text-[14px]">Filter By</span>
           </button>
         </div>
         <div className="col-6 flex justify-end items-center">
           <SearchBox />
         </div>
       </div>
-      <div className="flex-col md:flex lg:flex-row flex-wrap border border-gray bg-white h-[84%] md:h-[50%]">
+      <div className="flex-col md:flex lg:flex-row flex-wrap border border-gray bg-white h-[84%] md:h-[80%]">
         {userData.map((user, index) => (
-          <div className="md:col-md-4 " key={index}>
+          <div className="md:col-md-4 md:h-[7rem] flex-wrap" key={index}>
             <UserCard {...user} />
           </div>
         ))}
